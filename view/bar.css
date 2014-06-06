@@ -1,0 +1,187 @@
+* {
+	font-family: "Segoe UI";
+	cursor: default;
+}
+
+body {
+	background-image: url("./wallpaper.jpg");
+}
+
+.placeholder {
+	width: 48px;
+	height: 48px;
+	background-color: yellow;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#dock {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 55px;
+	width: 100%;
+	background-color: rgba(200, 200, 200, 0.7);
+	border-top: 1px solid #FFF;
+}
+
+#application-exec {
+	position: fixed;
+	top: 20px;
+	bottom: 56px;
+	left: 0;
+	right: 0;
+	background-color: #FFF;
+}
+
+.header-controllers div, .header-application-handler div {
+	display: inline-table;
+}
+
+.header-controllers .minimize-button {
+	border-radius: 0 10px 0 0;
+}
+
+.application-title {
+	float: right;
+	padding-right: 20px;
+}
+
+#application-exec .header-application-handler {
+	width: 100%;
+	height: 30px;
+	background: #3498db;
+	border-bottom: 1px solid #2980b9;
+	line-height: 30px;
+	color: #FFF;
+}
+
+.close-button {
+	background-image: url("./icons/Close.png");
+	background-size: 32px;
+	width: 32px;
+	height: 31px;
+}
+
+.close-button:active {
+	background-image: url("./icons/CloseActive.png");
+}
+
+.minimize-button:active {
+	background-image: url("./icons/MinusActive.png");
+}
+
+.minimize-button {
+	background-image: url("./icons/Minus.png");
+	background-size: 32px;
+	width: 32px;
+	height: 31px;
+}
+
+#dock img {
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	border-bottom: 5px solid transparent;
+	-webkit-transition-property: border;
+	-webkit-transition-duration: 0.27s;
+}
+
+#dock img.open-application {
+	border-bottom-color: #3498db;
+}
+
+#dock img:hover {
+	border-bottom-color: #FFF;
+}
+
+#dock img.open-application:hover {
+	border-bottom-color: #2980b9;
+}
+
+#dock img:active {
+	border-bottom-color: #2980b9;
+}
+
+a.tooltips {
+	position: relative;
+	display: inline;
+}
+a.tooltips span {
+	position: absolute;
+    width:140px;
+	color: #FFFFFF;
+	background: #000000;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.4s;
+}
+a.tooltips span:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -8px;
+	width: 0; 
+	height: 0;
+	border-top: 8px solid #000000;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}
+
+a:hover.tooltips span {
+	visibility: visible;
+	opacity: 0.8;
+	bottom: 60px;
+	left: 50%;
+	margin-left: -76px;
+	z-index: 999;
+}
+
+#retractile-bar {
+	position: fixed;
+	top: 0;
+	color: #FFF;
+	width: 100%;
+	left: 0;
+	right: 0;
+	height: 20px;
+	border-bottom: 0;
+	background: rgba(13, 13, 13, 0.7);
+	-webkit-transition-duration: 0.1s;
+	-webkit-transition-property: border;
+}
+
+#retractile-bar:active {
+	border-bottom: 3px solid #3498db;
+}
+
+#datetime-right {
+	float: right;
+	padding-right: 7px;
+}
+
+#desktop-icons ul {
+	list-style: none;
+	padding-top: 20px;
+}
+
+#desktop-icons ul li img {
+	width: 48px;
+	height: 48px;
+}
+
+#desktop-icons ul li {
+	text-align: center;
+	display: inline-table;
+	padding: 10px;
+}
